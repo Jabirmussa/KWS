@@ -39,7 +39,7 @@ body{
 
 .wrapper {
     width: calc(100% - 4rem);
-    max-width: rem(1140px);
+    max-width: rem(1440px);
     margin: 0 auto;
 
     @include breakpoint-tablet {
