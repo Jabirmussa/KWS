@@ -1,9 +1,11 @@
 .wrapper{
     position: relative;
 }
+
+
 .hero{
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
     .hero-svg{
         display: none;
         position: absolute;
@@ -22,9 +24,11 @@
         .hero-title{
             @include grid-column-span(4);
             @include breakpoint-tablet {
+                margin: 0 0 100px 0;
                 @include grid-column-span(2);
             }
             @include breakpoint-desktop-small {
+                margin: 0;
                 @include grid-column-span(4);
             }
             .title > p{
@@ -35,44 +39,52 @@
                 color: $color-blue-black;
                 font-weight: 500;
                 font-size: 18px;
+                margin-bottom: 5px;
             }
             h1{
                 color: $color-blue;
-                margin-bottom: 10px;
+                margin-bottom: 0;
                 max-width: 10ch;
+                font-size: clamp(2.5rem, 1.7958rem + 3.0047vw, 4.5rem);
+                line-height: clamp(5.375rem, 6.2113rem + -3.5681vw, 3rem);
             }
         }
         .hero-image{
-            .hero-image-desktop{
+            .svg {
+                position: absolute;
+                width: 0;
+                height: 0;
                 display: none;
-                svg g{
-                    fill:lightgray -70.787px -63.747px / 100% 125.389% no-repeat;
-                    filter: drop-shadow(rgba(0, 0, 0, 0.04) 0px 4px 6px );
-                }
                 @include breakpoint-tablet {
+                    filter: drop-shadow(rgba(0, 0, 0, 0.04) 0px 4px 6px );
                     display: block;
-                    height: 590px;
                 }
             }
-            @include grid-column-span(2);
+            .clipped {
+                height: 400px;
+                border-radius: 30px;
+                overflow: hidden;
+                @include breakpoint-tablet { 
+                    border-radius: 0;
+                    height: 100%;
+                    width: 65vw;
+                }
+                @include breakpoint-desktop-medium {
+                    max-height: 590px;
+                }
+                aspect-ratio: 3 / 2;
+                -webkit-clip-path: url(#my-clip-path);
+                clip-path: url(#my-clip-path);
+            }
+            @include grid-column-span(4);
+            @include breakpoint-tablet {
+                @include grid-column-span(2);
+            }
             @include breakpoint-desktop-small {
                 @include grid-column-span(8);
             }
-            svg {
-                position: absolute;
-                height: 100%;
-                width: 100%;
-            }
         }
     }
-    .hero-image-mobile{
-        height: 400px;
-        border-radius: 30px;
-        overflow: hidden;
-        @include breakpoint-tablet { 
-            display: none;
-        }
-    };
 }
 
 .header-image{
