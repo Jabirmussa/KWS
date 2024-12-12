@@ -1,0 +1,108 @@
+h1, h2, h3, h4{
+    font-family: $font-family-title;
+    line-height: 1;
+    font-weight: 400;
+    color: $color-black;
+}
+
+h2, h3, h4{
+    margin-bottom: rem(10px);
+}
+
+h1{
+    font-size: rem(40px);
+    line-height: rem(48px);
+    font-weight: 650;
+    @include breakpoint-tablet {
+        font-size: rem(72px);
+        line-height: rem(86px);
+    }
+}
+
+h2{
+    font-size: rem(32px);
+    margin-bottom: rem(10px);
+    font-weight: 650;
+}
+
+h3{
+    font-size: rem(26px); 
+}
+
+h4{
+    font-size: rem(22px);
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+.text-container {
+    max-width: rem(700px);
+    p, ul, ol,
+    blockquote,
+    .embed-container,
+    .wp-caption {
+        line-height: rem(24px);
+        margin-bottom: rem(24px);
+        max-width: 100%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul, ol {
+        position: relative;
+        list-style: none;
+
+        li:not(.gfield) {
+            padding-left: 1.25em;
+
+            &::before {
+                position: absolute;
+                text-indent: -1.25em;
+            }
+        }
+    }
+
+    ul {
+        li:not(.gfield) {
+            &::before {
+                content: '•';
+            }
+        }
+    }
+
+    ol {
+        counter-reset: ol-counter;
+
+        li {
+            counter-increment: ol-counter;
+
+            &::before {
+                content: counter(ol-counter) '.';
+            }
+        }
+    }
+
+    a{
+        &:not(.btn){
+            &:hover{
+                color: $color-black;
+            }    
+        }
+        
+    }
+
+    blockquote {
+        padding-left: 1em;
+        font-size: 1.4em;
+        line-height: 1.2;
+        border-left: .1rem solid currentColor;
+    }
+}
