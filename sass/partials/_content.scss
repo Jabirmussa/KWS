@@ -6,6 +6,7 @@
 .hero{
     position: relative;
     overflow: hidden;
+    margin-bottom: 0;
     .hero-svg{
         display: none;
         position: absolute;
@@ -89,6 +90,49 @@
         }
     }
 }
+
+.body-text-video {
+    padding-top: 185px;
+    margin-top: -50px;
+    background-color: $color-grey;
+    .wrapper{
+        .body-text-video-text{
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 80px;
+            @include breakpoint-tablet {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include breakpoint-desktop-small {
+                gap: 9rem ;
+            }
+            .body-text-video-title{
+                p{
+                    font-size: 16px;
+                    color: $color-blue;
+                    font-weight: 700;
+                }
+                h2{
+                    color: $color-orange;
+            }
+            }
+            .body-text-video-description{
+                p{
+                    color: $color-blue-black;
+                    margin-bottom: 40px;
+                }
+                .btns{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 24px;
+                }
+            }
+        }
+    }
+}
+
 
 .header-image{
     position: relative;

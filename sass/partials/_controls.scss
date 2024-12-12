@@ -1,22 +1,46 @@
 %control-properties {
-    transition: padding 0.3s ease-in-out;
+    transition: padding 0.4s ease-in-out;
     position: relative;
     font-family: $font-family-title;
-    font-size: rem(17px);
+    font-size: rem(16px);
+    font-weight: 700;
     display: inline-block;
     background: $color-black;
+    text-transform: uppercase;
     color: $color-white;
-    padding: rem(10px) rem(20px);
+    padding: rem(16px) rem(24px);
     text-decoration: none;
     border-radius: 0;
     line-height: 1;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 %focus-properties {
     color: $color-white;
 }
-
+.btn-yellow{
+    border-radius: 30px;
+    background: linear-gradient(180deg, rgba(235, 93, 11, 0.20) 25%, rgba(255, 215, 0, 0.20) 75%), var(--Color-Brand-yellow, #FFD700);
+}
+.btn-arrow{
+    background: none;
+    color: $color-black !important;
+    padding-left: 0;
+    .arrow{
+        position: absolute;
+        width: 30px;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover{
+        color: $color-black !important;
+        .arrow{
+            right: -30px;
+        }
+    }
+}
 .btn-center{
     text-align: center;
 }
