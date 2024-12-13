@@ -20,9 +20,12 @@ h1{
 }
 
 h2{
-    font-size: rem(48px);
+    font-size: rem(36px);
     margin-bottom: rem(10px);
     font-weight: 650;
+    @include breakpoint-tablet {
+        font-size: rem(48px);
+    }
 }
 
 h3{

@@ -23,7 +23,6 @@
             @include grid-layout(12);
         }
         .hero-title{
-            
             @include grid-column-span(4);
             @include breakpoint-tablet {
                 margin: 0 0 100px 0;
@@ -49,9 +48,13 @@
                 margin-bottom: 10px;
                 max-width: 10ch;
                 font-size: clamp(2.5rem, 1.7958rem + 3.0047vw, 4.5rem);
+                @media screen and (max-width: 1110px) {
+                    line-height: 1;
+                }
             }
         }
         .hero-image{
+            filter: drop-shadow(rgba(0, 0, 0, 0.04) 0px 4px 6px );
             .svg {
               display: none;
               width: 0;
@@ -69,7 +72,6 @@
                     border-radius: 0;
                     height: 100%;
                     width: 65vw;
-                    filter: drop-shadow(rgba(0, 0, 0, 0.04) 0px 4px 6px );
                     display: block;
                 }
                 @include breakpoint-desktop-medium {
@@ -92,42 +94,80 @@
 }
 
 .body-text-video {
-    padding-top: 185px;
-    margin-top: -50px;
+    @include breakpoint-tablet {
+        padding-top: 185px;
+        margin-top: -50px;
+        
+    }
     background-color: $color-grey;
     .wrapper{
+        .stars{
+            .pink-star{
+                position: absolute;
+                left: 25vw;
+                top:-64px;
+            }
+            .yellow-star{
+                position: absolute;
+                left: 279px;
+                top: -24px;
+            }
+            display: none;
+            @include breakpoint-tablet {
+                display: block;
+            }
+        }
         .body-text-video-text{
             display: grid;
             align-items: center;
             grid-template-columns: 1fr;
-            gap: 3rem;
-            margin-bottom: 80px;
+            gap: 20px 3rem;
+            margin-bottom: 48px;
             @include breakpoint-tablet {
+                margin-bottom: 80px;
                 grid-template-columns: repeat(2, 1fr);
             }
             @include breakpoint-desktop-small {
-                gap: 9rem ;
+                gap: 5rem;
             }
             .body-text-video-title{
                 p{
                     font-size: 16px;
                     color: $color-blue;
                     font-weight: 700;
+                    margin-bottom: 10px;
                 }
                 h2{
                     color: $color-orange;
-            }
+                 }
             }
             .body-text-video-description{
                 p{
                     color: $color-blue-black;
                     margin-bottom: 40px;
+                    font-size: 16px;
+                    @include breakpoint-tablet {
+                        font-size: 18px;
+                    }
                 }
                 .btns{
                     display: flex;
                     flex-wrap: wrap;
                     gap: 24px;
                 }
+            }
+        }
+        .body-text-video-video{
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            height: 254px;
+            @include breakpoint-tablet {
+                height: 738px;
+            }
+            .video-container{
+                width: 100%;
+                height: 100%;
             }
         }
     }

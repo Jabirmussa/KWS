@@ -1,18 +1,17 @@
 %control-properties {
     transition: padding 0.4s ease-in-out;
     position: relative;
-    font-family: $font-family-title;
+    font-family: $font-family-default;
     font-size: rem(16px);
     font-weight: 700;
     display: inline-block;
     background: $color-black;
     text-transform: uppercase;
     color: $color-white;
-    padding: rem(16px) rem(24px);
+    padding: rem(16px) rem(24px) rem(14px) rem(24px) ;
     text-decoration: none;
     border-radius: 0;
     line-height: 1;
-    // overflow: hidden;
 }
 
 %focus-properties {
@@ -20,7 +19,13 @@
 }
 .btn-yellow{
     border-radius: 30px;
+    border: 1px solid $color-yellow;
     background: linear-gradient(180deg, rgba(235, 93, 11, 0.20) 25%, rgba(255, 215, 0, 0.20) 75%), var(--Color-Brand-yellow, #FFD700);
+    &:hover{
+        background: none;
+        color: $color-blue;
+        border: 1px solid #000;
+    }
 }
 .btn-arrow{
     background: none;
@@ -28,16 +33,16 @@
     padding-left: 0;
     .arrow{
         position: absolute;
-        width: 30px;
+        width: 25px;
         top: 50%;
-        right: -20px;
+        right: -10px;
         transform: translateY(-50%);
         transition: all 0.3s ease-in-out;
     }
     &:hover{
         color: $color-black !important;
         .arrow{
-            right: -30px;
+            right: -20px;
         }
     }
 }
