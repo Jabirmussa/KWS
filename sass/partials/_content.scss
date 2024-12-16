@@ -295,6 +295,30 @@
 
 }
 
+.header-text{
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 80px;
+        @include breakpoint-tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        h1{
+            color: $color-orange;
+        }
+        .text{
+            padding-right: 0;
+            @include breakpoint-desktop-small {
+                padding-right: 30px;
+            }
+        }
+    }
+}
+
+.mission-vision{
+    background-color: $color-grey;
+}
+
 
 .header-image{
     position: relative;
