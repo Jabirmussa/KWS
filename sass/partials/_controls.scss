@@ -36,7 +36,7 @@
         top: 50%;
         right: -10px;
         transform: translateY(-50%);
-        transition: all 0.3s ease-in-out;
+        transition: all 0.4s ease-in-out;
     }
     &:hover{
         color: $color-black !important;
@@ -62,7 +62,7 @@
 }
 
 .btn {
-    transition: all 0.2s ease-in-out;
+    // transition: all 0.2s ease-in-out;
     @extend %control-properties;
     &:hover{
         @extend %focus-properties;
