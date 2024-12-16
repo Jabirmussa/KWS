@@ -55,7 +55,7 @@ body{
     margin: 4rem 0;
 
     @include breakpoint-desktop-small {
-        margin: 7rem 0;
+        margin: 112px 0;
     }
 
 }
@@ -63,6 +63,6 @@ body{
 .with-padding {
     padding: 4rem 0;
     @include breakpoint-tablet {
-        padding: 8rem 0;
+        padding: 112px 0;
     }
 }

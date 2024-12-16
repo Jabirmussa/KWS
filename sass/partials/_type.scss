@@ -24,7 +24,8 @@ h2{
     font-size: rem(36px);
     margin-bottom: rem(10px);
     font-weight: 650;
-    @include breakpoint-tablet {
+    
+    @include breakpoint-desktop-small {
         font-size: rem(48px);
     }
 }

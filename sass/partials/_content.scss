@@ -9,10 +9,14 @@
     .hero-svg{
         display: none;
         position: absolute;
-        bottom: 0;
+        bottom: 30px;
         left: 0;
         @include breakpoint-tablet {
+            width: 95px;
             display: block
+        }
+        @include breakpoint-desktop-medium {
+            width: 130px;
         }
     }
     .wrapper{
@@ -97,17 +101,20 @@
 }
 
 .body-text-video {
-   
+    background-color: $color-grey;
+    padding-bottom: 0;
+    margin-top: -20px;
+    padding-top: calc(4rem + 20px);
     @include breakpoint-tablet {
         padding-top: 185px;
-        margin-top: -50px;
+        margin-top: -80px;
+        padding-bottom: 112px;
     }
-    background-color: $color-grey;
     .wrapper{
         .stars{
             .pink-star{
                 position: absolute;
-                left: 25vw;
+                left: 367px;
                 top:-64px;
             }
             .yellow-star{
@@ -122,7 +129,6 @@
         }
         .body-text-video-text{
             display: grid;
-            align-items: center;
             grid-template-columns: 1fr;
             gap: 20px 3rem;
             margin-bottom: 48px;
@@ -131,6 +137,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             @include breakpoint-desktop-small {
+                align-items: center;
                 gap: 5rem;
             }
             .body-text-video-title{
@@ -188,14 +195,23 @@
 }
 
 .page-links{
+    overflow: hidden;
+   
+    @include breakpoint-tablet {
+        overflow: visible;
+    }
     .paint{
         position: absolute;
-        right: -74px;
         top: 45px;
         display: none;
         @include breakpoint-tablet {
+            right: -50px;
             display: block;
         }
+        @include breakpoint-desktop-large{
+            right: -74px;
+        }
+
     }
     .airplane{
         position: absolute;
@@ -236,6 +252,7 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 48px;
+        justify-items: center;
         @include breakpoint-tablet {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -259,6 +276,7 @@
                     font-weight: 650;
                     line-height: 1.4;
                     @include breakpoint-tablet {
+                        margin-bottom: 16px;
                         font-size: 24px;
                     }
                 }
