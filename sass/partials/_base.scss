@@ -52,19 +52,12 @@ body{
 }
 
 .with-margin {
-    margin: 2rem 0;
-
-    @include breakpoint-tablet {
-        margin: 3rem 0;
-    }
+    margin: 4rem 0;
 
     @include breakpoint-desktop-small {
-        margin: 4rem 0;
+        margin: 7rem 0;
     }
 
-    @include breakpoint-desktop-large {
-        margin: 8rem 0;
-    }
 }
 
 .with-padding {
