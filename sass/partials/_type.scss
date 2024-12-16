@@ -1,4 +1,4 @@
-h1, h2, h3, h4{
+h1, h2, h3, h4, h5, h6{
     font-family: $font-family-title;
     line-height: 1;
     font-weight: 400;
@@ -24,7 +24,7 @@ h2{
     font-size: rem(36px);
     margin-bottom: rem(10px);
     font-weight: 650;
-    
+
     @include breakpoint-desktop-small {
         font-size: rem(48px);
     }
@@ -36,6 +36,14 @@ h3{
 
 h4{
     font-size: rem(22px);
+}
+
+h6{
+    font-size: 18px;
+    font-weight: 650;
+    @include breakpoint-tablet {
+        font-size: 20px;
+    }
 }
 
 b, strong {
