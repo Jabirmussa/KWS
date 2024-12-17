@@ -354,6 +354,7 @@
                     }
                     margin: 24px 0;
                     max-width: 53ch;
+                    font-size: 18px;
                     @include breakpoint-tablet {
                         margin: 32px 0 40px 0;
                     }
@@ -383,9 +384,12 @@
                     padding: 16px;
                     border-radius: 10px;
                     h6{
-                        color: $color-orange;
+                        color: $color-blue-black;
                         margin-bottom: 18px;
                         font-size: 20px;
+                        @include breakpoint-tablet {
+                            color: $color-orange;
+                        }
                     }
                     p{
                         font-size: 16px;
