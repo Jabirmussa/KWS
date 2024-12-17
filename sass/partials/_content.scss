@@ -313,6 +313,7 @@
         .text{
             p{
                 color: $color-blue-black;
+                font-size: 18px;
             }
             padding-right: 0;
             @include breakpoint-desktop-small {
@@ -327,9 +328,8 @@
     .wrapper{
         display: grid;
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 45px;
         @include breakpoint-tablet {
-            gap: 40px;
             grid-template-columns: repeat(2, 1fr);
         }
         @include breakpoint-desktop-small {
@@ -344,34 +344,46 @@
             top: -42px;
             z-index: 1;
             display: none;
+            width: 13vw;
+            max-width: 145px;
             @include breakpoint-tablet {
                 display: block;
             }
         }
         .mission-vision-content{
-            margin: 24px 0 0 0;
+            @include breakpoint-tablet {
+                margin: 30px 0 0 0;
+            }
             .mission-vision-title{
                 p {
                     span{
                         color: $color-orange;
+                        font-weight: 500;
                     }
                     &:first-child{
                         margin: 0 0 16px 0;
                     }
-                    margin: 24px 0 32px 0;
+                    margin: 24px 0;
+                    max-width: 53ch;
+                    @include breakpoint-tablet {
+                        margin: 32px 0 40px 0;
+                    }
                 }
                 h2{
                     color: $color-blue;
                 }
-    
             }
             .mission-vision-items{
                 display: flex;
                 flex-direction: column;
-                gap: 32px;
-                margin-bottom: 40px;
+                gap: 24px;
                 padding-right: 0;
-                @include breakpoint-desktop-small{
+                margin-bottom: 32px;
+                @include breakpoint-tablet {
+                    gap: 32px;
+                    margin-bottom: 40px;
+                }
+                @include breakpoint-desktop-medium{
                     flex-direction: row;
                 }
                 @include breakpoint-desktop-small{
@@ -383,7 +395,8 @@
                     border-radius: 10px;
                     h6{
                         color: $color-orange;
-                        margin-bottom: 16px;
+                        margin-bottom: 18px;
+                        font-size: 20px;
                     }
                     p{
                         font-size: 16px;
@@ -397,6 +410,7 @@
                     display: block;
                     top: 50%;
                     right: 24px;
+                    max-width: 24px;
                     transform: translateY(-50%);
                     path{
                         fill: #fff;
@@ -433,7 +447,6 @@
         }
     }
 }
-
 
 .header-image{
     position: relative;
