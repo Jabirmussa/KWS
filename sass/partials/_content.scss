@@ -681,6 +681,7 @@
             overflow: hidden;
             border-radius: 30px;
             aspect-ratio: 1 / 0.7;
+            margin-top: -30px;
             @include breakpoint-tablet {
                 border-radius: 60px;
                 margin-top: -175px;
