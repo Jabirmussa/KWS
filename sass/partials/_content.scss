@@ -605,6 +605,7 @@
         h2{
             color: $color-blue-black;
             max-width: 33ch;
+            margin-bottom: 0;
         }
     }
     .team-items{
@@ -681,7 +682,7 @@
             border-radius: 30px;
             aspect-ratio: 1 / 0.7;
             margin-top: -30px;
-           
+            box-shadow: 0px 12px 16px -4px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.03);
             height: 348px;
             @include breakpoint-tablet {
                 border-radius: 60px;
