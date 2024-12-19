@@ -1,0 +1,79 @@
+.about-us{
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 48px;
+        @include breakpoint-tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint-desktop-small {
+            gap: 80px;
+        }
+        .about-us-image{
+            position: relative;
+            .w-orange{
+                position: absolute;
+                top: -230px;
+                left: -200px;
+                width: 50vw;
+                display: none;
+                @include breakpoint-tablet {
+                    max-width: 438px;
+                    display: block;
+                }
+            }
+            .image{
+                border-radius: 30px;
+                aspect-ratio: 1 / 1.07;
+                overflow: hidden;
+            }
+        }
+        .about-us-text{
+            @include breakpoint-desktop-small {
+                margin: 85px 0;
+            }
+            p{
+                color: $color-blue-black;
+            }
+            h2{
+                margin-bottom: 24px;
+                color: $color-blue;
+                font-size: 32px;
+                @include breakpoint-tablet {
+                    font-size: 38px;
+                }
+            }
+            h3{
+                font-weight: 650;
+                font-size: 32px;
+                line-height: 41.6px;
+            }
+            p{
+                font-size: 16px;
+                margin: 24px 0;
+                @include breakpoint-tablet {
+                    font-size: 18px;
+                }
+            }
+            .about-us-items{
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                .about-us-item{
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                   .icon{
+                        width: 16px;
+                        height: 17px;
+                   }
+                    p{
+                        margin: 0;
+                        font-size: 16px;
+                    }
+                }   
+            }
+        }
+
+    }
+}

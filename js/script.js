@@ -44,13 +44,16 @@
 //     });
 // }
 
-const blurredImageDiv = document.querySelector(".blurred-img");
-const img = blurredImageDiv.querySelector("img");
-function loaded() {
-  blurredImageDiv.classList.add("loaded");
-}
-if (img.complete) {
-  loaded();
-} else {
-  img.addEventListener("load", loaded);
-}
+const blurredImageDiv = document.querySelectorAll(".blurred-img");
+blurredImageDiv.forEach(image => {
+  const img = image.querySelector("img");
+  function loaded() {
+    image.classList.add("loaded");
+  }
+  if (img.complete) {
+    loaded();
+  } else {
+    img.addEventListener("load", loaded);
+  }
+  
+});
