@@ -36,17 +36,21 @@
                 color: $color-blue-black;
             }
             h2{
-                margin-bottom: 24px;
                 color: $color-blue;
                 font-size: 32px;
                 @include breakpoint-tablet {
+                    margin-bottom: 24px;
                     font-size: 38px;
                 }
             }
             h3{
                 font-weight: 650;
-                font-size: 32px;
-                line-height: 41.6px;
+                font-size: 24px;
+                line-height: 31.6px;
+                @include breakpoint-tablet {
+                    line-height: 41.6px;
+                    font-size: 32px;
+                }
             }
             p{
                 font-size: 16px;
@@ -64,8 +68,8 @@
                     align-items: center;
                     gap: 16px;
                    .icon{
-                        width: 16px;
-                        height: 17px;
+                    width: 16px;
+                    height: 17px;
                    }
                     p{
                         margin: 0;
@@ -75,5 +79,26 @@
             }
         }
 
+    }
+}
+
+.green-background{
+    background-color: $color-green;
+    .page-link-title h2{
+        color: #fff;
+    }
+    .wrapper{
+        .page-link-item {
+
+            .page-text{
+                h3{
+                    color: #fff;
+                }
+            }
+            .btn-blue{
+                color: $color-yellow;
+                border: 1px solid #fff;
+            }
+        }
     }
 }
