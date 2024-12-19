@@ -26,6 +26,13 @@
         border: 1px solid #000;
     }
 }
+
+.btns{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
 .btn-arrow{
     background: none;
     color: $color-black !important;
@@ -62,7 +69,6 @@
 }
 
 .btn {
-    // transition: all 0.2s ease-in-out;
     @extend %control-properties;
     &:hover{
         @extend %focus-properties;
