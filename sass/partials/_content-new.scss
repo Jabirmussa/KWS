@@ -129,8 +129,12 @@
         .questions-title{
             text-align: center;
             margin-bottom: 80px;
+            h2{
+                color: $color-blue-black;
+            }
             p{
                 font-size: 20px;
+                color: $color-blue-black;
             }
         }
         .questions-items{
