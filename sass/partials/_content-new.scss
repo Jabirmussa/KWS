@@ -136,7 +136,7 @@
         .questions-items{
             width: 100%;
             .question-item{
-                padding: 22px 0;
+                padding: 22px 0 15px 0;
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
@@ -152,6 +152,17 @@
                 }
                 svg{
                     cursor: pointer;
+                    margin-right: 10px;
+                }
+                .answer{
+                    display: none;
+                }
+            }
+           .question-item:active{
+                .answer{
+                    display: block;
+                    margin-top: 10px;
+                    color: $color-blue;
                 }
             }
         }
