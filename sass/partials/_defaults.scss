@@ -102,10 +102,12 @@ img,
     }
 }
 
-.wp-caption-text {
-    text-align: center;
-    font-size: .8em;
-    opacity: .7;
+p.wp-caption-text {
+    font-size: 14px;
+    padding-left: 20px;
+    border-left: 2px solid $color-orange;
+    color: $color-blue !important;
+    margin-bottom: 48px !important;
 }
 
 .embed-container {

@@ -7,8 +7,8 @@ Text Domain: starter-theme
 Version: 1
 */
 @use 'sass:math';
-@import 'partials/defaults';
 @import 'partials/variables';
+@import 'partials/defaults';
 @import 'partials/mixins';
 @import 'partials/breakpoints';
 @import 'partials/base';
