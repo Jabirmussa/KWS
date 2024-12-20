@@ -1,7 +1,7 @@
 h1, h2, h3, h4, h5, h6{
     font-family: $font-family-title;
     line-height: 1;
-    font-weight: 400;
+    font-weight: 650;
     color: $color-black;
     font-style: normal;
 }
@@ -55,7 +55,7 @@ em {
 }
 
 .text-container {
-    max-width: rem(700px);
+    max-width: 75ch;
     p, ul, ol,
     blockquote,
     .embed-container,
@@ -67,6 +67,10 @@ em {
         &:last-child {
             margin-bottom: 0;
         }
+    }
+    p{
+        font-size: 16px;
+        color: $color-blue-black;
     }
 
     ul, ol {
@@ -113,9 +117,46 @@ em {
     }
 
     blockquote {
-        padding-left: 1em;
-        font-size: 1.4em;
-        line-height: 1.2;
-        border-left: .1rem solid currentColor;
+        padding-left: 20px;
+        font-size: 24px;
+        line-height: 36px;
+        border-left: 2px solid $color-green;
+        color: $color-blue;
+        font-weight: 300;
+        font-style: italic;
+    }
+    h2, .bold{
+        color: $color-blue;
+        margin-bottom: 16px;
+    }
+    h3{
+        font-size: 32px;
+        color: $color-orange;
+        margin-bottom: 20px;
+        @include breakpoint-tablet {
+            font-size: 40px;
+        }
+    }
+    h4{
+        font-size: 24px;
+        @include breakpoint-tablet {
+            font-size: 32px;
+        }
+    }
+    h5{
+        font-size: 20px;
+        @include breakpoint-tablet {
+            font-size: 24px;
+        }
+    }
+    h6{
+        font-size: 18px;
+        @include breakpoint-tablet {
+            font-size: 20px;
+        }
+    }
+    h4, h5, h6{
+        color: $color-blue-black;
+        margin-bottom: 16px;
     }
 }
