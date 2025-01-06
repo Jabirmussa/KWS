@@ -1,27 +1,144 @@
 footer{
     position: relative;
-    background: $color-black;
+    background: $color-yellow;
     padding: rem(30px) 0;
     @include breakpoint-tablet{
         padding: rem(64px) 0;
     }
     @include breakpoint-desktop-small{
-        padding: rem(120px) 0;
+        padding: rem(80px) 0;
     }
 
-    .wrapper{
-        @include grid-layout(12, rem(30px), rem(30px));
-        div{
-            @include grid-column-span(12);
-            @include breakpoint-tablet{
-                @include grid-column-span(6);
+    .wrapper {
+        .footer-content{
+            display: flex;
+            gap: 48px;
+            flex-direction: column;
+            @include breakpoint-tablet {
+                justify-content: space-between;
+                flex-direction: row;
             }
-            li{
-                padding-left: 0!important;
+            h2, h3, h4{
+                color: $color-blue;
+            }
+            .logo-footer-content{
+                display: grid;
+                justify-items: center;
+                .footer-logo{
+                    display: block;
+                    width: 150px;
+                    height: 160px;
+                    @include breakpoint-tablet {
+                        width: 345px;
+                        margin-bottom: 70px;
+                    }
+                }
+                .footer-btns{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 24px;
+                    @include breakpoint-tablet {
+                        gap: 74px;
+                        flex-direction: row;
+                    }
+                }
+                .btn-orange{
+                    gap: 14px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16.8px;
+                    padding: 11px 20px 9.5px 20px;
+                }
+            }
+            .footer-content-links{
+                display: grid;
+                text-align: center;
+                grid-template-columns: 1fr;
+                gap: 48px;
+                @include breakpoint-tablet {
+                    text-align: left;
+                }
+                @include breakpoint-desktop-small {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                @include breakpoint-desktop-medium {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                p, a{
+                    color: $color-blue-black;
+                }
+                .link-item{
+                    ul>li{
+                        margin-bottom: 14px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .socials{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    @include breakpoint-tablet {
+                        align-items: start;
+                    }
+                    .social-items{
+                        display: block;
+                        .social-item{
+                            display: flex;
+                            gap: 14px;
+                            text-decoration: none;
+                            margin-bottom: 18px;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
             }
         }
-        h2, h3, h4, p, a{
-            color: $color-white;
+        .right-privacy{
+            font-size: 14px;
+            position: relative;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            margin-top: 75px;
+            text-align: center;
+            @include breakpoint-tablet {
+                flex-direction: row;
+            }
+            &::before{
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: $color-blue;
+                position: absolute;
+                top: -32px;
+                left: 0;
+            }
+            p{
+                color: $color-blue-black;
+                margin-bottom: 0;
+            }
+            .privacy ul{
+                display: flex;
+                gap: 14px;
+                flex-direction: column;
+                margin-bottom: 20px;
+                @include breakpoint-tablet {
+                    margin-bottom: 0;
+                    flex-direction: row;
+                }
+                li>a{
+                    color: $color-blue;
+                    margin-bottom: 0;
+                    &:hover{
+                        color: $color-blue-black;
+                    }
+                }
+            }
         }
     }
 }
