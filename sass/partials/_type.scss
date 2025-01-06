@@ -79,11 +79,12 @@ em {
         list-style: none;
 
         li:not(.gfield) {
-            padding-left: 1.25em;
+            padding-left: 10px;
 
             &::before {
                 position: absolute;
-                text-indent: -1.25em;
+                text-indent: 0;
+                left: 0;
             }
         }
     }

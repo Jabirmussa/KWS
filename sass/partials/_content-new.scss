@@ -206,8 +206,8 @@
             width: 100vw;
             height: 400px;
             right: 1rem;
-            border-radius: 60px;
             @include breakpoint-tablet {
+                border-radius: 60px;
                 height: 538px;
                 width: 100%;
                 left: 0;
@@ -217,16 +217,17 @@
             }
         }
         .info{
-            display: block;
-            gap: 180px;
+            display: grid;
             margin-bottom: 56px;
+            text-align: center;
+            gap: 48px;
             @include breakpoint-tablet {
+                gap: 180px;
+                text-align: left;
                 margin-bottom: 80px;
-                display: grid;
                 grid-template-columns: 1fr 1fr;
             }
             p{
-
                 color: $color-blue-black;
             }
             .title{
@@ -238,15 +239,22 @@
                 }
                 h2{
                     color: $color-orange;
+                    margin-bottom: 20px;
                 }
             }
             .contacts{
                 .contact-item{
                     display: flex;
+                    align-items: center;
+                    flex-direction: column;
                     gap: 16px;
                     margin-bottom: 24px;
                     &:last-child{
                         margin-bottom: 0;
+                    }
+                    @include breakpoint-tablet {
+                        align-items: normal;
+                        flex-direction: row;
                     }
                     .icon{
                         display: flex;
@@ -271,4 +279,30 @@
             }
         }
     }
+}
+
+.direction{
+    background-color: $color-grey;
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        @include breakpoint-tablet {
+            gap: 180px;
+            flex-direction: row;
+        }
+        .title{
+            h2{
+                color: $color-blue;
+                margin-bottom: 20px;
+            }
+        }
+        .direction-text{
+            p{
+                margin-bottom: 0;
+            }
+            li{
+                color: $color-blue-black;
+            }
+        }
     }
+}
