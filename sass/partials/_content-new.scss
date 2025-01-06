@@ -198,20 +198,76 @@
 .contact-info{
     @include breakpoint-tablet {
         margin-top: 112px;
-        margin-bottom: 6rem;
+        margin-bottom:58px;
     }
     .wrapper {
         #map {
-            height: 738px;
-            width: 100%;
+            position: relative;
+            width: 100vw;
+            height: 400px;
+            right: 1rem;
             border-radius: 60px;
+            @include breakpoint-tablet {
+                height: 538px;
+                width: 100%;
+                left: 0;
+            }
+            @include breakpoint-desktop-medium {
+                height: 738px;
+            }
         }
         .info{
             display: block;
             gap: 180px;
+            margin-bottom: 56px;
             @include breakpoint-tablet {
+                margin-bottom: 80px;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+            }
+            p{
+
+                color: $color-blue-black;
+            }
+            .title{
+                p{
+                    &:first-child{
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                    }
+                }
+                h2{
+                    color: $color-orange;
+                }
+            }
+            .contacts{
+                .contact-item{
+                    display: flex;
+                    gap: 16px;
+                    margin-bottom: 24px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    .icon{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 36px;
+                        height: 36px;
+                        background-color: $color-green;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        padding: 8px;
+                    }
+                    .info-item{
+                        h3{
+                            font-size: 20px;
+                        }
+                        a{
+                            color: $color-orange;
+                        }
+                    }
+                }
             }
         }
     }
