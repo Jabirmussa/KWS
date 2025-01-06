@@ -196,12 +196,23 @@
 }
 
 .contact-info{
-    .wrapper{
-        display: block;
-        gap: 180px;
-        @include breakpoint-tablet {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+    @include breakpoint-tablet {
+        margin-top: 112px;
+        margin-bottom: 6rem;
+    }
+    .wrapper {
+        #map {
+            height: 738px;
+            width: 100%;
+            border-radius: 60px;
+        }
+        .info{
+            display: block;
+            gap: 180px;
+            @include breakpoint-tablet {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
         }
     }
-}
+    }
