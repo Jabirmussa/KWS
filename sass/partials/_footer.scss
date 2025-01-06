@@ -93,6 +93,12 @@ footer{
                             &:last-child{
                                 margin-bottom: 0;
                             }
+                            &:hover{
+                                color: $color-blue;
+                                svg path{
+                                    fill: $color-blue;
+                                }
+                            }
                         }
                     }
                 }

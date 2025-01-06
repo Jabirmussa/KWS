@@ -222,7 +222,7 @@
             text-align: center;
             gap: 48px;
             @include breakpoint-tablet {
-                gap: 180px;
+                gap: 280px;
                 text-align: left;
                 margin-bottom: 80px;
                 grid-template-columns: 1fr 1fr;
@@ -236,8 +236,15 @@
                         font-weight: 500;
                         margin-bottom: 10px;
                     }
+                    &:last-child{
+                        font-size: 18px;
+                    }
                 }
                 h2{
+                    @include breakpoint-desktop-medium {
+                        
+                        font-size: 56px;
+                    }
                     color: $color-orange;
                     margin-bottom: 20px;
                 }
@@ -287,13 +294,17 @@
         display: flex;
         flex-direction: column;
         @include breakpoint-tablet {
-            gap: 180px;
+            gap: 236px;
             flex-direction: row;
         }
         .title{
             h2{
+                font-size: 32px;
                 color: $color-blue;
                 margin-bottom: 20px;
+                @include breakpoint-tablet {
+                    font-size: 40px;
+                }
             }
         }
         .direction-text{

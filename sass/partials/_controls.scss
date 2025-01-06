@@ -68,6 +68,10 @@
     color: #fff;
     background-color: $color-orange;
     border-radius: 30px;
+    border: 1px solid $color-orange;
+    &:hover{
+        background-color: transparent;
+    }
 }
 .btn-center{
     text-align: center;
