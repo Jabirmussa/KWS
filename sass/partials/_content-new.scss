@@ -140,7 +140,7 @@
         .questions-items{
             width: 100%;
             .question-item{
-                padding: 22px 0 15px 0;
+                padding: 22px 0;
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
@@ -152,6 +152,7 @@
                     font-weight: 700;
                     font-size: 18px;
                     line-height: 27px;
+                    margin-bottom: 0;
                     color: $color-blue;
                 }
                 svg{
@@ -191,5 +192,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+}
+
+.contact-info{
+    .wrapper{
+        display: block;
+        gap: 180px;
+        @include breakpoint-tablet {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }
