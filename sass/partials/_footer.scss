@@ -30,10 +30,19 @@ footer{
                     display: block;
                     padding-top: 18.5px;
                     width: 150px;
-                    height: 160px;
+                    height: 115px;
+                    margin-bottom: 70px;
                     @include breakpoint-tablet {
                         width: 345px;
-                        margin-bottom: 70px;
+                        height: 160px;
+                    }
+                    img{
+                        width: 100%;
+                        @include breakpoint-tablet {
+                            width: auto;
+                        }
+                        height: 100%;
+                        object-fit: cover;
                     }
                 }
                 .footer-btns{
