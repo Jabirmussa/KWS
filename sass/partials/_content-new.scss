@@ -140,10 +140,12 @@
         .questions-items{
             width: 100%;
             .question-item{
+                .question{
+                    display: flex;
+                    justify-content: space-between;
+                }
                 padding: 22px 0;
                 width: 100%;
-                display: flex;
-                justify-content: space-between;
                 border-top: 1px solid $color-green;
                 &:last-child{
                     border-bottom: 1px solid $color-green;
@@ -158,16 +160,18 @@
                 svg{
                     cursor: pointer;
                     margin-right: 10px;
+                    transition: transform .5s ease-in;
                 }
                 .answer{
-                    display: none;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 1.4s ease-in-out;
                 }
-            }
-           .question-item:active{
-                .answer{
-                    display: block;
-                    margin-top: 10px;
-                    color: $color-blue;
+                &.active .answer{
+                    max-height: 300px;
+                }
+                &.active svg{
+                    transform: rotate(180deg);
                 }
             }
         }
@@ -196,6 +200,7 @@
 }
 
 .contact-info{
+    margin-bottom: 0;
     @include breakpoint-tablet {
         margin-top: 112px;
         margin-bottom:58px;
@@ -301,7 +306,7 @@
             h2{
                 font-size: 32px;
                 color: $color-blue;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
                 @include breakpoint-tablet {
                     font-size: 40px;
                 }
@@ -313,6 +318,48 @@
             }
             li{
                 color: $color-blue-black;
+            }
+        }
+    }
+}
+
+.register{
+    background-color: $color-grey;
+    .wrapper{
+        display: grid;
+        @include breakpoint-tablet {
+            grid-template-columns: 1fr 1fr;
+        }
+        p{
+            color: $color-blue-black;
+        }
+        .main-text .title{
+            p{
+                &:first-child{
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+                &:last-child{
+                    font-size: 18px;
+                }
+            }
+            h2{
+                @include breakpoint-desktop-medium {
+                    font-size: 56px;
+                }
+                color: $color-orange;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.contact-us{
+    .wrapper{
+        .title{
+            text-align: center;
+            h2{
+                color: $color-orange;
             }
         }
     }

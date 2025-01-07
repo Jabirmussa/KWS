@@ -149,3 +149,20 @@ function initMap() {
     });
     addMarkerInfo();
 }
+
+const questions = document.querySelectorAll('.question-item');
+
+questions.forEach(question => {
+    question.addEventListener('click', () => {
+        if (question.classList.contains('active')) {
+            question.classList.remove('active');
+        } else {
+            questions.forEach(item => {
+                if (item !== question) {
+                    item.classList.remove('active');
+                }
+            });
+            question.classList.add('active');
+        }
+    })
+});
