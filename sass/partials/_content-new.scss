@@ -335,6 +335,9 @@
         }
         .main-text {
             .title{
+                @include breakpoint-tablet {
+                    margin-bottom: 100px;
+                }
                 p{
                     &:first-child{
                         font-weight: 500;
@@ -353,7 +356,18 @@
                 }
             }
             svg{
-                
+                position: absolute;
+                right: 12px;
+                top: -15px;
+                width: 96px;
+                height: 77px;
+                @include breakpoint-tablet {
+                    position: relative;
+                    right: 0;
+                    top: 0;
+                    width: auto;
+                    height: auto;
+                }
             }
         }
         
