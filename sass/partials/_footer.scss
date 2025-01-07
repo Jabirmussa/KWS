@@ -20,12 +20,14 @@ footer{
             }
             h2, h3, h4{
                 color: $color-blue;
+                font-size: 20px;
             }
             .logo-footer-content{
                 display: grid;
                 justify-items: center;
                 .footer-logo{
                     display: block;
+                    padding-top: 18.5px;
                     width: 150px;
                     height: 160px;
                     @include breakpoint-tablet {
@@ -48,7 +50,7 @@ footer{
                     display: flex;
                     align-items: center;
                     font-size: 16.8px;
-                    padding: 11px 20px 9.5px 20px;
+                    padding: 9px 20px 7.5px 20px;
                 }
             }
             .footer-content-links{
