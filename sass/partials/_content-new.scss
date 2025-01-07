@@ -227,10 +227,13 @@
             text-align: center;
             gap: 48px;
             @include breakpoint-tablet {
-                gap: 280px;
+                gap: 70px;
                 text-align: left;
                 margin-bottom: 80px;
                 grid-template-columns: 1fr 1fr;
+            }
+            @include breakpoint-desktop-small {
+                gap:200px
             }
             p{
                 color: $color-blue-black;
