@@ -333,24 +333,30 @@
         p{
             color: $color-blue-black;
         }
-        .main-text .title{
-            p{
-                &:first-child{
-                    font-weight: 500;
-                    margin-bottom: 10px;
+        .main-text {
+            .title{
+                p{
+                    &:first-child{
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                    }
+                    &:last-child{
+                        font-size: 18px;
+                    }
                 }
-                &:last-child{
-                    font-size: 18px;
+                h2{
+                    @include breakpoint-desktop-medium {
+                        font-size: 56px;
+                    }
+                    color: $color-orange;
+                    margin-bottom: 20px;
                 }
             }
-            h2{
-                @include breakpoint-desktop-medium {
-                    font-size: 56px;
-                }
-                color: $color-orange;
-                margin-bottom: 20px;
+            svg{
+                
             }
         }
+        
     }
 }
 

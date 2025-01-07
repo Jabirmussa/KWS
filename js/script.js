@@ -164,5 +164,5 @@ questions.forEach(question => {
             });
             question.classList.add('active');
         }
-    })
+    });
 });
