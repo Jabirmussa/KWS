@@ -12,11 +12,15 @@ footer{
     .wrapper {
         .footer-content{
             display: flex;
-            gap: 48px;
             flex-direction: column;
+            gap: 48px;
             @include breakpoint-tablet {
-                justify-content: space-between;
+                gap: 80px;
                 flex-direction: row;
+            }
+            @include breakpoint-desktop-medium {
+                gap: 310px;
+                
             }
             h2, h3, h4{
                 color: $color-blue;
@@ -51,10 +55,10 @@ footer{
                     }
                 }
                 .btn-orange{
-                    gap: 14px;
+                    gap: 10px;
                     display: flex;
                     align-items: center;
-                    font-size: 16.8px;
+                    font-size: 14px;
                     padding: 9px 20px 7.5px 20px;
                 }
             }
@@ -74,6 +78,7 @@ footer{
                 }
                 p, a{
                     color: $color-blue-black;
+                    font-size: 14px;
                 }
                 .link-item{
                     ul>li{
